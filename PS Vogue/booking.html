@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Service — PS Vogue Salon, Surat</title>
+  <meta name="description" content="Book hair, makeup, and skin services at PS Vogue Salon in Surat. Coming soon — for now, book via WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="booking-hero">
+  <div class="booking-hero__content">
+    <div class="booking-coming-soon">Coming Soon</div>
+    <span class="eyebrow">Salon & Makeup Bookings</span>
+    <h1>Online Booking <em style="color:var(--gold-400)">Launching Soon</em></h1>
+    <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:var(--sp-3) auto var(--sp-6)">
+      We're building a seamless booking experience for all our salon services. Until then, WhatsApp us to book your appointment instantly!
+    </p>
+    <a href="http://wa.me/917715086978?text=Hi%21%20I%27d%20like%20to%20book%20a%20salon%20appointment%20at%20PS%20Vogue."
+       target="_blank" rel="noopener"
+       class="btn btn--whatsapp btn--lg">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.123 1.529 5.852L0 24l6.335-1.502A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.875 9.875 0 01-5.034-1.376l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12c0-5.448 4.434-9.882 9.882-9.882 5.447 0 9.882 4.434 9.882 9.882 0 5.447-4.435 9.882-9.882 9.882z"/></svg>
+      Book via WhatsApp
+    </a>
+
+    <div class="booking-services">
+      <div class="booking-service-pill">💅 Nail Art & Extensions</div>
+      <div class="booking-service-pill">👸 Bridal Makeup</div>
+      <div class="booking-service-pill">💇 Hair Colour & Cuts</div>
+      <div class="booking-service-pill">✨ Facials & Waxing</div>
+      <div class="booking-service-pill">💆 HydraFacial</div>
+      <div class="booking-service-pill">🎨 Mehendi</div>
+    </div>
+
+    <div style="margin-top:var(--sp-7);display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap">
+      <a href="shop.html" class="btn btn--gold">Shop Nail Sets Online</a>
+      <a href="custom.html" class="btn btn--ghost-white">Custom Nail Order</a>
+    </div>
+
+    <div style="margin-top:var(--sp-8);color:rgba(255,255,255,0.4);font-size:var(--fs-sm)">
+      📍 Fortune The Shopping Island, Near Galaxy Circle, Pal Adajan, Surat
+      <br>🕐 Mon–Sat: 10 AM – 8 PM &nbsp;|&nbsp; Sunday: 11 AM – 7 PM
+      <br>📞 <a href="tel:+917715086978" style="color:rgba(255,255,255,0.5)">+91 77150 86978</a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/config.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', () => {
+  renderHeader('booking.html');
+  renderFooter();
+});
+</script>
+</body>
+</html>

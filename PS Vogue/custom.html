@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Nail Order — PS Vogue</title>
+  <meta name="description" content="Design your own custom nail set with PS Vogue. Upload reference photos and our artists will craft your dream nails.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-stripe">
+  <span class="eyebrow">Bespoke Nail Art</span>
+  <h1>Custom Nail Order</h1>
+  <p>Share your vision and we'll bring it to life — exclusively for you.</p>
+</div>
+
+<div class="custom-layout">
+  <div class="container">
+    <div class="custom-grid">
+
+      <!-- Form -->
+      <div>
+        <form id="custom-form" novalidate style="display:flex;flex-direction:column;gap:var(--sp-5)">
+
+          <!-- Photo upload -->
+          <div>
+            <label style="display:block;font-weight:600;font-size:var(--fs-sm);margin-bottom:var(--sp-3)">
+              Reference Photos <span style="color:var(--text-muted);font-weight:400">(optional, up to 5 images)</span>
+            </label>
+            <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Upload reference photos">
+              <input type="file" id="file-input" accept="image/*" multiple>
+              <div class="upload-zone__icon">📸</div>
+              <p><strong>Click to upload</strong> or drag & drop your inspo images</p>
+              <p style="margin-top:4px;font-size:var(--fs-xs)">PNG, JPG, WEBP · Max 5MB each · Up to 5 photos</p>
+            </div>
+            <div class="preview-grid" id="preview-grid"></div>
+            <div id="upload-count" style="font-size:var(--fs-xs);color:var(--text-muted);margin-top:var(--sp-2)">0/5 photos selected</div>
+          </div>
+
+          <!-- Contact -->
+          <div style="background:var(--white);border-radius:var(--r-lg);padding:var(--sp-6);box-shadow:var(--sh-sm)">
+            <h3 style="margin-bottom:var(--sp-5)">Your Details</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4)">
+              <div class="form-group">
+                <label for="c-name">Full Name <span>*</span></label>
+                <input type="text" id="c-name" name="name" placeholder="Your name" autocomplete="name">
+                <span class="form-error" id="c-err-name">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label for="c-phone">Mobile Number <span>*</span></label>
+                <input type="tel" id="c-phone" name="phone" placeholder="10-digit number" autocomplete="tel" maxlength="10">
+                <span class="form-error" id="c-err-phone">Enter a valid 10-digit number</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nail Specs -->
+          <div style="background:var(--white);border-radius:var(--r-lg);padding:var(--sp-6);box-shadow:var(--sh-sm)">
+            <h3 style="margin-bottom:var(--sp-5)">Nail Preferences</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4)">
+              <div class="form-group">
+                <label for="c-shape">Nail Shape</label>
+                <select id="c-shape">
+                  <option>Almond</option>
+                  <option>Coffin</option>
+                  <option>Square</option>
+                  <option>Stiletto</option>
+                  <option>Oval</option>
+                  <option>Round</option>
+                  <option>Squoval</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="c-length">Nail Length</label>
+                <select id="c-length">
+                  <option>Short</option>
+                  <option>Medium</option>
+                  <option>Long</option>
+                  <option>Extra Long</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="c-size">Size Kit</label>
+                <select id="c-size">
+                  <option>XS</option>
+                  <option value="S">S</option>
+                  <option value="M" selected>M</option>
+                  <option value="L">L</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="c-occasion">Occasion</label>
+                <select id="c-occasion">
+                  <option>Everyday Wear</option>
+                  <option>Wedding / Bridal</option>
+                  <option>Engagement / Mehendi</option>
+                  <option>Birthday / Party</option>
+                  <option>Festive / Navratri</option>
+                  <option>Photoshoot / Editorial</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Budget & Notes -->
+          <div style="background:var(--white);border-radius:var(--r-lg);padding:var(--sp-6);box-shadow:var(--sh-sm)">
+            <h3 style="margin-bottom:var(--sp-5)">More Details</h3>
+            <div class="form-group" style="margin-bottom:var(--sp-4)">
+              <label for="c-budget">Budget Range</label>
+              <select id="c-budget">
+                <option>Under ₹500</option>
+                <option>₹500 – ₹1,000</option>
+                <option>₹1,000 – ₹1,500</option>
+                <option>₹1,500 – ₹2,500</option>
+                <option>₹2,500+</option>
+                <option>No limit — just make it perfect</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="c-notes">Describe Your Vision <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
+              <textarea id="c-notes" name="notes" rows="4"
+                placeholder="E.g. I want a soft pink ombre with tiny diamonds on the ring finger, almond shape, medium length. Something elegant for my sister's wedding..."
+                maxlength="500"></textarea>
+              <span class="form-hint">Max 500 characters. We'll discuss further on WhatsApp!</span>
+            </div>
+          </div>
+
+          <div id="whatsapp-reminder" class="whatsapp-reminder"></div>
+
+          <button type="submit" class="btn btn--whatsapp btn--lg btn--block">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.123 1.529 5.852L0 24l6.335-1.502A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.875 9.875 0 01-5.034-1.376l-.361-.214-3.741.981.999-3.648-.235-.374A9.86 9.86 0 012.118 12c0-5.448 4.434-9.882 9.882-9.882 5.447 0 9.882 4.434 9.882 9.882 0 5.447-4.435 9.882-9.882 9.882z"/></svg>
+            Send Custom Request on WhatsApp
+          </button>
+          <p style="text-align:center;font-size:var(--fs-xs);color:var(--text-muted)">
+            This opens WhatsApp with your details pre-filled. You can attach your reference photos directly in the chat.
+          </p>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="custom-sidebar">
+        <h3>How Custom Orders Work</h3>
+        <div class="custom-sidebar-step">
+          <div class="custom-sidebar-step__num">1</div>
+          <div class="custom-sidebar-step__text">
+            <strong>Fill the form</strong>
+            <p>Tell us about your nail shape, occasion, budget, and share reference photos.</p>
+          </div>
+        </div>
+        <div class="custom-sidebar-step">
+          <div class="custom-sidebar-step__num">2</div>
+          <div class="custom-sidebar-step__text">
+            <strong>Chat with our artist</strong>
+            <p>We'll discuss the design, materials, and finalize everything on WhatsApp — no surprises.</p>
+          </div>
+        </div>
+        <div class="custom-sidebar-step">
+          <div class="custom-sidebar-step__num">3</div>
+          <div class="custom-sidebar-step__text">
+            <strong>Receive your set</strong>
+            <p>Your custom nails are crafted and shipped to you, or picked up from our Surat salon.</p>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.1);margin:var(--sp-5) 0">
+
+        <div style="font-size:var(--fs-sm);opacity:0.8">
+          <div style="color:var(--gold-400);font-weight:600;margin-bottom:var(--sp-2)">💡 Popular custom requests</div>
+          <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
+            <li>• Bridal sets with 3D florals & pearls</li>
+            <li>• Bride squad matching sets</li>
+            <li>• Navratri festive designs</li>
+            <li>• Chrome ombre with glitter accents</li>
+            <li>• Minimalist nude with gold foil</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:var(--sp-5);background:rgba(255,255,255,0.06);border-radius:var(--r-md);padding:var(--sp-4)">
+          <div style="font-size:var(--fs-xs);color:var(--gold-400);font-weight:600;margin-bottom:var(--sp-2)">⏱ Turnaround Time</div>
+          <div style="font-size:var(--fs-sm);opacity:0.8">Custom sets take <strong style="color:var(--white)">5–10 business days</strong> from design approval. Rush orders available — ask on WhatsApp!</div>
+        </div>
+
+        <a href="tel:+917715086978" class="btn btn--ghost-white btn--block" style="margin-top:var(--sp-5)">
+          📞 Call Us Directly
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/config.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/custom.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Nail Sets — PS Vogue</title>
+  <meta name="description" content="Browse PS Vogue's full collection of press-on nail sets — glitter, bridal, pastel, chrome and more. Delivered across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="shop-layout">
+  <div class="container">
+    <div style="padding-top:var(--sp-5)">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Shop</span>
+      </div>
+      <h1 style="margin-bottom:var(--sp-2)">Nail Sets</h1>
+      <p style="color:var(--text-muted);margin-bottom:0">Handcrafted sets by our certified nail artists in Surat.</p>
+    </div>
+  </div>
+
+  <div class="shop-filter-bar">
+    <div class="container">
+      <div class="shop-filter-bar__inner">
+        <div class="chip-group" id="category-chips"></div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4)">
+          <span class="result-count" id="result-count"></span>
+          <select id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="new">New Arrivals</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="products-grid" id="products-grid"></div>
+  </div>
+</div>
+
+<!-- Custom CTA -->
+<section style="background:var(--plum-900);padding:var(--sp-8) var(--gutter);text-align:center;margin-top:var(--sp-9)">
+  <div class="container container--narrow">
+    <span class="eyebrow">Can't find what you want?</span>
+    <h2 style="color:var(--white);margin-bottom:var(--sp-3)">Design Your Own</h2>
+    <p style="color:rgba(255,255,255,0.75);margin-bottom:var(--sp-5)">Tell us your vision, share reference images, and our artists will craft your perfect set.</p>
+    <a href="custom.html" class="btn btn--gold btn--lg">Start Custom Order →</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/config.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/shop.js" defer></script>
+</body>
+</html>
